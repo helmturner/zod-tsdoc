@@ -1,5 +1,5 @@
 {
-  "name": "zod-doc",
+  "name": "zod-tsdoc",
   "version": "0.0.1",
   "description": "Generate JSDoc annotations from Zod inferred types",
   "main": "index.js",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/helmturner/zod-doc"
+    "url": "https://github.com/helmturner/zod-tsdoc"
   },
   "keywords": [
     "zod",
@@ -54,9 +54,9 @@
   "author": "Alec Helmturner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/helmturner/zod-doc/issues"
+    "url": "https://github.com/helmturner/zod-tsdoc/issues"
   },
-  "homepage": "https://github.com/helmturner/zod-doc#readme",
+  "homepage": "https://github.com/helmturner/zod-tsdoc#readme",
   "dependencies": {
     "boxen": "^7.1.1",
     "commander": "^12.0.0"
