@@ -39,8 +39,7 @@
     "semantic-release": "semantic-release"
   },
   "bin": {
-    "node-command-line-starter": "./src/bin/zdoc.bin.js",
-    "restaurant": "./src/bin/zdoc.bin.js"
+    "zdoc": "./src/bin/zdoc.bin.js"
   },
   "repository": {
     "type": "git",
