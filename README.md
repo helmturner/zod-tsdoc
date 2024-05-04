@@ -7,8 +7,7 @@ Automization is often done in the form of a command line utility.
 This starter provides you with all the necessary setup to quickly create your node-command-line utility. Focus on your util and don't loose time with
 the project setup.
 
-The starter provides you with a setup to perform fully automated releases with Travis. Publish new versions quickly and automated to your npm repositiory. If this is
-new to you, you may want to read my blog-post about [The way to fully automated releases in open source projects](https://medium.com/@kevinkreuzer/the-way-to-fully-automated-releases-in-open-source-projects-44c015f38fd6)
+The starter provides you with a setup to perform fully automated releases with Github Actions. Publish new versions quickly and automated to your npm repositiory.
 
 ## What's included?
 
@@ -33,8 +32,8 @@ This starter allows you to write your command line util in TypeScript. 💪
 
 ### Build tools
 - [Codecov](https://codecov.io/) - Integration to upload your coverage report to codecov
-- [Travis](https://travis-ci.org/) - Sample travis file with all the necessary build steps
-- [SemanticRelease](https://github.com/semantic-release/semantic-release) - All the setup to use semantic release. Publish your command line utility to npm by using conventional commits
+- [Release Please](https://github.com/googleapis/release-please) - All the setup to use Release Please. Bump versions, update CHANGELOG.md, and publish your command line utility to npm by using conventional commits
+- [Github Actions CI/CD](https://resources.github.com/devops/ci-cd/) - Setup to test, lint, and typecheck your code, on each PR and push to master. Also includes the setup to publish your package to npm on a merge to master (using Release Please)
 
 ## Folder structure
 
@@ -52,21 +51,12 @@ This starter allows you to write your command line util in TypeScript. 💪
 3. Adjust the files in bin, src and __mocks__
 4. Adjust the bin command in package.json
 
-### Setup CI (Travis)
-1. Go to https://travis-ci.org/ and sign up with your Github account. Accept the Authorizaiton of GitHub. Activate Travis for your repository.
-2. The starter allready contains a .travis.yml file that will be interpreted up by travis.
-
 ### Setup npm account
 Sign up on https://www.npmjs.com/.
 
-### Setup using semantic-release-cli
-```
-npm install -g semantic-release-cli
-
-cd your-module
-semantic-release-cli setup
-```
-Enter the required informations. The CLI will do the setup and add the necessary tokens to your Travie repository settings.
+### Setup CI
+1. Get an NPM token from https://www.npmjs.com/
+2. Add the token to your repository secrets on Github as NPM_TOKEN
 
 ### Visualize coverage
 To visualize coverage just sign up on https://codecov.io/.
@@ -76,31 +66,6 @@ Go to Settings and copy the token. Add this token as CODECOV_TOKEN to your travi
 Use conventional commit messages for your commits. A merge on master
 will then analyze the commits, automatically bump the version, create
 the release assets and then publish the package.
-
-## Play around with the example
-If you are curious about how this example is used, just try it out. Open up a terminal
-and run:
-```
-npx node-command-line-starter pizza beer
-```
-which will output the following:
-```                    _
-  _   _  ___  _   _ _ __    ___  _ __ __| | ___ _ __
- | | | |/ _ \| | | | '__|  / _ \| '__/ _` |/ _ \ '__|
- | |_| | (_) | |_| | |    | (_) | | | (_| |  __/ |
-  \__, |\___/ \__,_|_|     \___/|_|  \__,_|\___|_|
-  |___/
-
-   ╭─────────────────────────────────────────────╮
-   │                                             │
-   │   You ordered the following food:  pizza    │
-   │   You ordered the following drink:  beer    │
-   │                                             │
-   ╰─────────────────────────────────────────────╯
-```
-additionally the starter example also allows you to use a -w option followed
-by a filename. In case you do so, your order is written to the file you specified.
-
 
 
 
