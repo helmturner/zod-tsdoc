@@ -1,7 +1,7 @@
 {
-  "name": "node-command-line-starter",
-  "version": "2.0.0",
-  "description": "Starter to create node-command-line utilities",
+  "name": "zod-doc",
+  "version": "0.0.1",
+  "description": "Generate JSDoc annotations from Zod inferred types",
   "main": "index.js",
   "husky": {
     "hooks": {
@@ -30,8 +30,8 @@
     "commit": "git-cz",
     "format:check": "prettier --list-different '{src,__mocks__,bin}/**/*.ts'",
     "format:write": "prettier --write '{src,__mocks__,bin}/**/*.ts'",
-    "start:help": "ts-node ./src/bin/order.bin.ts -h",
-    "start:example": "ts-node ./src/bin/order.bin.ts pizza beer",
+    "start:help": "ts-node ./src/bin/zdoc.bin.ts -h",
+    "start:example": "ts-node ./src/bin/zdoc.bin.ts pizza beer",
     "test": "jest",
     "bump-version": "rjp package.json version $VERSION",
     "test:coverage": "jest --coverage",
@@ -39,26 +39,27 @@
     "semantic-release": "semantic-release"
   },
   "bin": {
-    "node-command-line-starter": "./src/bin/order.bin.js",
-    "restaurant": "./src/bin/order.bin.js"
+    "node-command-line-starter": "./src/bin/zdoc.bin.js",
+    "restaurant": "./src/bin/zdoc.bin.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kreuzerk/node-command-line-starter.git"
+    "url": "https://github.com/helmturner/zod-doc"
   },
   "keywords": [
-    "CLI",
-    "Replace",
-    "JSON",
-    "Buildtool",
-    "Starter"
+    "zod",
+    "jsdoc",
+    "typescript",
+    "cli",
+    "annotation",
+    "codegen"
   ],
-  "author": "Kevin Kreuzer",
+  "author": "Alec Helmturner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kreuzerk/node-command-line-starter/issues"
+    "url": "https://github.com/helmturner/zod-doc/issues"
   },
-  "homepage": "https://github.com/kreuzerk/node-command-line-starter#readme",
+  "homepage": "https://github.com/helmturner/zod-doc#readme",
   "dependencies": {
     "boxen": "^5.1.2",
     "commander": "^8.2.0",
