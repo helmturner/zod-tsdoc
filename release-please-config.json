@@ -5,7 +5,7 @@
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
       "include-v-in-tag": true,
-      "initial-version": "0.0.0",
+      "initial-version": "0.0.1",
       "pull-request-footer": "This PR was generated with [Release-Please](https://github.com/googleapis/release-please).",
       "tag-separator": "/"
     }
