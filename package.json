@@ -1,6 +1,6 @@
 {
   "name": "@helmturner/zod-tsdoc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate JSDoc annotations from Zod inferred types",
   "main": "index.js",
   "husky": {
