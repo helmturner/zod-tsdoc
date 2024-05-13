@@ -34,7 +34,11 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "npx release-please release-pr --token=$GITHUB_TOKEN --repo-url=helmturner/zod-tsdoc && npx release-please release-pr --release-as=latest --token=$GITHUB_TOKEN --repo-url=helmturner/zod-tsdoc",
+    "release:beta": "npx release-please release-pr --prerelease-type=beta --prerelease --token=$GITHUB_TOKEN --repo-url=helmturner/zod-tsdoc",
+    "release:rc": "npx release-please release-pr --prerelease-type=rc --prerelease --token=$GITHUB_TOKEN --repo-url=helmturner/zod-tsdoc",
+    "release:next": "npx release-please release-pr --release-as=next --prerelease --token=$GITHUB_TOKEN --repo-url=helmturner/zod-tsdoc"
   },
   "bin": {
     "zdoc": "./src/bin/zdoc.bin.js"
