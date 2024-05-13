@@ -1,6 +1,6 @@
 {
   "name": "zod-tsdoc",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Generate JSDoc annotations from Zod inferred types",
   "main": "index.js",
   "husky": {
