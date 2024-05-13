@@ -3,7 +3,8 @@ type DeepWritable<T> =
     { -readonly [key in keyof T]?: DeepWritable<U> }
   : T;
 
-const chalk =
+const chalk = 
+// @ts-expect-error
   jest.genMockFromModule<DeepWritable<import("chalk").ChalkInstance>>("chalk");
 
 chalk.red = jest.fn();
